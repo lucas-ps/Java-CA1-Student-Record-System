@@ -25,15 +25,9 @@ public class Student {
     
     // Methods
 
-    public void setRecords(StudentRecord[] records){
-        this.records = records;
-        this.gpa = calculateGPA(records);
-    }
-
-    public double getGPA(){
-        return this.gpa;
-    }
-
+    /**
+     * @return double value for the student's GPA based on records provided.
+     */
     public double calculateGPA(StudentRecord[] records){
         int countModules = 0;
         int total = 0;
@@ -49,10 +43,9 @@ public class Student {
         return gpa;
     }
 
-    public int getID(){
-        return this.id;
-    }
-
+    /**
+     * @return formatted string with the student's transcript (marks for each module).
+     */
     public String printTranscript() {
         String formattedString = "University of Knowledge - Official Transcript" +
                 "\n" +
@@ -78,4 +71,20 @@ public class Student {
         return formattedString;
     }
 
+    /**
+     * Get/Set attributes.
+     */
+    public void setRecords(StudentRecord[] records){
+        this.records = records;
+        // Recalculating GPA with new marks
+        this.gpa = calculateGPA(records);
+    }
+
+    public int getID(){
+        return this.id;
+    }
+
+    public double getGPA(){
+        return this.gpa;
+    }
 }

@@ -64,7 +64,9 @@ public class University {
 
     public static void main(String[] args) {
 
-        //////////// Creating objects from provided data ////////////
+        /**
+         * Creating objects from provided data.
+         */
 
         // ModuleDescriptor objects
 
@@ -282,9 +284,11 @@ public class University {
         University university;
         university = new University(moduleDescriptors, students, modules);
 
-        //////////// Testing main methods ////////////
+        /**
+        *Testing main methods
+         */
 
-        // Print Reports
+        /*// Print Reports
         System.out.println("The UoK has " + university.getTotalNumberStudents() + " students.");
 
         // best module
@@ -293,6 +297,6 @@ public class University {
 
         // best student
         System.out.println("The best student is:");
-        System.out.println(university.getBestStudent().printTranscript());
+        System.out.println(university.getBestStudent().printTranscript());*/
     }
 }

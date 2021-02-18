@@ -20,6 +20,9 @@ public class ModuleDescriptor {
 
     // Methods
 
+    /**
+     * Get/Set attributes.
+     */
     public String getName() {
         return this.name;
     }

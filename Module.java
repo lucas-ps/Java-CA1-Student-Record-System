@@ -25,10 +25,9 @@ public class Module {
 
     // Methods
 
-    public String getName(){
-        return this.module.getName();
-    }
-
+    /**
+     * @return The average grade for a module.
+     */
     public double getFinalAverageGrade() {
         double[] weights = this.module.getContinuousAssignmentWeights();
         int i = 0;
@@ -42,8 +41,11 @@ public class Module {
         return finalAverageGrade;
     }
 
-    public void setRecords(StudentRecord[] records){
-        this.records = records;
+    /**
+     * Get/Set attributes.
+     */
+    public String getName(){
+        return this.module.getName();
     }
 
     public double[] getContinuousAssignmentWeights(){
@@ -57,4 +59,9 @@ public class Module {
     public byte getTerm() {
         return term;
     }
+
+    public void setRecords(StudentRecord[] records){
+        this.records = records;
+    }
+
 }

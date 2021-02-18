@@ -26,11 +26,9 @@ public class StudentRecord {
 
     // Methods
 
-    public String getMarks(){
-        String markString = Arrays.toString(this.marks);
-        return markString;
-    }
-
+    /**
+     * @return The final, weighted overall score for a module.
+     */
     public double calcFinalScore(){
         int i = 0;
         double[] weights = module.getContinuousAssignmentWeights();
@@ -42,9 +40,9 @@ public class StudentRecord {
         return weightedGrade;
     }
 
-    public Module getModule() {
-        return module;
-    }
+    /**
+     * @return boolean value for if the student's score is above the module's average score.
+     */
 
     public boolean calcIfAverage(){
         double moduleAverage = this.module.getFinalAverageGrade();
@@ -54,5 +52,15 @@ public class StudentRecord {
             return false;
         }
     }
-	
+
+    /**
+     * Get/Set attributes.
+     */
+    public String getMarks(){
+        String markString = Arrays.toString(this.marks);
+        return markString;
+    }
+    public Module getModule() {
+        return module;
+    }
 }
